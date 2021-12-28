@@ -1,0 +1,7 @@
+<ng-container *ngIf='post$ | async as posts'>
+    <article *ngFor='let p of posts'>
+        <a style="color: blue" [routerLink]="[p.id]" >{{p.title}}</a>
+        <div>{{p.body}}</div>
+    </article>
+</ng-container>
+<router-outlet></router-outlet>
